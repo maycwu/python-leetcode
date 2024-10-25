@@ -4,7 +4,7 @@
 str = "{}[]{}"
 str2 = "{)"
 str3 = "((()))"
-
+str4 = "(({]))"
 
 # def isValid(str):
 #     stack = []  # only use append and pop
@@ -46,3 +46,6 @@ def isValid(s):
 
 
 print(isValid(str))
+print(isValid(str2))
+print(isValid(str3))
+print(isValid(str4))
