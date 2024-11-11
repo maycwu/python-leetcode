@@ -20,9 +20,9 @@ from typing import List
 
 # Approach: create a set to store unique elements
 
-# nums = [1, 2, 3, 1]
-# nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
-nums = [2, 14, 18, 22, 22]
+nums1 = [1, 2, 3, 1]
+nums2 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
+nums3 = [2, 14, 18, 22, 22]
 
 
 def contains_duplicate(nums):
@@ -38,7 +38,10 @@ def contains_duplicate(nums):
     return False
 
 
-print(contains_duplicate(nums))
+print(contains_duplicate(nums1))
+print(contains_duplicate(nums2))
+print(contains_duplicate(nums3))
+
 
 # Time - O(n)
 # Space - O(1)
