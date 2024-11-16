@@ -5,7 +5,7 @@ target = 10
 
 
 def two_sum(array, target):
-    matches = {6: 0, }
+    matches = {}
     for i in range(len(array)):
         match = target - array[i]
         if match in matches:
