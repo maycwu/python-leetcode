@@ -22,7 +22,7 @@ class Solution:
         while left <= right:
             middle = (left + right) // 2
             if nums[middle] == target:
-                return middle
+                return middle  # returns the index
             elif nums[middle] > target:
                 right = middle - 1
             elif nums[middle] < target:
@@ -33,3 +33,4 @@ class Solution:
 solution = Solution()
 print(solution.search([-1, 0, 2, 4, 6, 8], 4))
 print(solution.search([-1, 0, 2, 4, 6, 8], 3))
+print(solution.search([0, 1, 2, 3, 4, 5, 6], 4))
