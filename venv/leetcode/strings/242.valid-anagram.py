@@ -1,4 +1,16 @@
 def isAnagram(s: str, t: str):
+  arr_s = list(s)   # ['l', 'i', 's', 't', 'e', 'n']
+  arr_t = list(t)   # ['s', 'i', 'l', 'e', 'n', 't']
+
+  arr_s.sort()   # ['e', 'i', 'l', 'n', 's', 't']
+  arr_t.sort()   # ['e', 'i', 'l', 'n', 's', 't']
+
+  return arr_s == arr_t
+
+def isAnagram(s: str, t: str):
+        return sorted(s) == sorted(t)
+
+def isAnagram(s: str, t: str):
         s_map = {}
         t_map = {}
 
@@ -15,7 +27,7 @@ def isAnagram(s: str, t: str):
         print(t_map)
         return False
 
-    
+
 dict1 = {'a': 1, 'b': 2, 'c': 3}
 dict2 = {'a': 1, 'c': 3, 'b': 2}
 print(dict1 == dict2)
