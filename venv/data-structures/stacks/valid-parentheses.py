@@ -9,3 +9,34 @@
 
 # Example 1: (){[{()}]}
 # Output: TRUE
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if len(s) <= 1:
+            return False
+
+        brackets = {
+            "[" : "]",
+            "{" : "}",
+            "(" : ")"
+        }
+        stack = []
+
+        for bracket in s:
+            # Opening bracket → push its expected closing bracket
+            if bracket in brackets:
+                stack.append(brackets[bracket])
+
+            # Closing bracket → check if it matches the top of the stack
+            elif stack and stack[-1] == bracket:
+                stack.pop()
+
+            else:
+                return False  # mismatch or no opening bracket for this closing one
+        return len(stack) == 0
+
+
+sol = Solution()
+# print(sol.isValid("([{}])"))
+# print(sol.isValid("(){[{()}]}"))
+print(sol.isValid("()]"))
