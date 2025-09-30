@@ -10,7 +10,9 @@
 # Output: "bb"
 
 def longestPalindrome(s):
+    result = ''
 
+    # helper function
     def expand_around_center(left, right):
         while left >= 0 and right < len(s) and s[left] == s[right]:
             left -= 1
@@ -22,7 +24,7 @@ def longestPalindrome(s):
         # right: Remains as the exclusive end index for slicing.
         return s[left + 1 : right]
 
-    result = ''
+
 
     for i in range(len(s)):
         # Odd-length palindrome (center is a single character)
@@ -30,18 +32,17 @@ def longestPalindrome(s):
         # Even-length palindrome (center is between two characters)
         even_palindrome = expand_around_center(i, i + 1)
 
-        # Update the result if a longer palindrome is found
+        # Update the result if a longer palindrome is found,
+        # key is a function that tells Python how to compare the elements when finding the maximum
+        # since we want the longest string, we use key=len.
+        # So Python checks len(result), len(odd_palindrome), and len(even_palindrome), and returns the string with the greatest length.
         result = max(result, odd_palindrome, even_palindrome, key=len)
 
     return result
 
 
 
-
-
-
-
 word = "mayonaise"
-print(word[1: 5])
+print(word[1: 1])
 print(longestPalindrome("babad"))
 print(longestPalindrome("cbbd"))

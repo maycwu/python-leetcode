@@ -23,11 +23,12 @@ class Solution:
         arr.sort()
 
         result = []
-        while len(result) < k:
+        while k > 0:
             result.append(arr.pop()[1])  # arr.pop()[1] takes the number part of that pair.
+            k -= 1
 
         return result
 
 
 sol = Solution()
-sol.topKFrequent([1, 1, 1, 2, 2, 3], 2)  # Output [1,2]
+print(sol.topKFrequent([1, 1, 1, 2, 2, 3], 2))  # Output [1,2]
