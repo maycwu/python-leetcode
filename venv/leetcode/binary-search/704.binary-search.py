@@ -19,18 +19,20 @@ class Solution:
         left = 0
         right = len(nums) - 1
 
+        # With  while left <= right: The loop runs and finds the target.
+        # With while left < right: The loop doesn't run, and we miss the target.
         while left <= right:
             middle = (left + right) // 2
-            if nums[middle] == target:
-                return middle  # returns the index
-            elif nums[middle] > target:
-                right = middle - 1
-            elif nums[middle] < target:
+            if nums[middle] < target:
                 left = middle + 1
+            if nums[middle] > target:
+                right = middle - 1
+            if nums[middle] == target:
+                return middle
         return -1
 
 
 solution = Solution()
-print(solution.search([-1, 0, 2, 4, 6, 8], 4))
-print(solution.search([-1, 0, 2, 4, 6, 8], 3))
-print(solution.search([0, 1, 2, 3, 4, 5, 6], 4))
+print(solution.search([-1, 0, 2, 4, 6, 8], 4))  # Output: 3
+print(solution.search([-1, 0, 2, 4, 6, 8], 3))  # Output: -1
+print(solution.search([0, 1, 2, 3, 4, 5, 6], 4))  # Output: 4
