@@ -93,9 +93,9 @@ def find_longest_substring(s):
     return longest
 
 
-# print(lengthOfLongestSubstring("abcabcbb"))
-# print(lengthOfLongestSubstring("bbbb"))
-# print(lengthOfLongestSubstring("pwwkew"))
+print(lengthOfLongestSubstring("abcabcbb"))
+print(lengthOfLongestSubstring("bbbb"))
+print(lengthOfLongestSubstring("pwwkew"))
 
 print(find_longest_substring("abcabcbb"))
 print(find_longest_substring("bbbb"))
