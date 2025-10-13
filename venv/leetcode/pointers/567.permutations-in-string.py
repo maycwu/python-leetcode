@@ -57,3 +57,4 @@ def checkInclusion(s1, s2):
 print(checkInclusion("abc", "lecabee"))  # Output: true
 
 print(checkInclusion("abc", "lecaabee"))  # Output: false
+print(checkInclusion("ab", "ab"))  # Output: true
