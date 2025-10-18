@@ -1,13 +1,13 @@
-# def count_frequency(words):
-#     count = {}
-#     for word in words:
-#         count[word] = count.get(word, 0) + 1
-#
-#     sorted_words = sorted(count.keys())
-#     result = []
-#     for word in sorted_words:
-#         result.append(count[word])
-#     return result
+def count_frequency(words):
+    count = {}
+    for word in words:
+        count[word] = count.get(word, 0) + 1
+
+    sorted_words = sorted(count.keys())
+    result = []
+    for word in sorted_words:
+        result.append(count[word])
+    return result
 
 
 # print(count_frequency(["the", "dog", "got", "the", "bone"]))  # [ 1, 1, 1, 2]
@@ -15,7 +15,6 @@
 
 
 def count_freq(words):
-
     words.sort()
     result = []
     unique_words = set(words)
