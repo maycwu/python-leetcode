@@ -43,9 +43,29 @@ def subarraySum(nums, k):
 
     return count
 
+# Same logic as above but returns the subarrays instead of counts
+# def subarraySum(nums, k):
+#     prefix_sums = {0: [-1]}  # Maps prefix sum to list of indices where it occurs
+#     current_sum = 0
+#     result = []
+#
+#     for i, num in enumerate(nums):
+#         current_sum += num
+#
+#         # Check if (current_sum - k) exists in prefix_sums
+#         if (current_sum - k) in prefix_sums:
+#             # Add all subarrays ending at current index
+#             for start in prefix_sums[current_sum - k]:
+#                 result.append(nums[start + 1:i + 1])
+#
+#         # Update the prefix_sums map
+#         if current_sum not in prefix_sums:
+#             prefix_sums[current_sum] = []
+#         prefix_sums[current_sum].append(i)
+#     return result
 
-print(subarraySum([1, 1, 1], 2))  # Output: 2
-print(subarraySum([1, 2, 3], 3))  # Output: 2
-print(subarraySum([2, -1, 3, -2], 2))  # Output: 3
-print(subarraySum([3, 4, 7, 2, -3, 1, 4, 2], 7))  # Output: 4
+# print(subarraySum([1, 1, 1], 2))  # Output: 2
+# print(subarraySum([1, 2, 3], 3))  # Output: 2
+# print(subarraySum([2, -1, 3, -2], 2))  # Output: 3
+# print(subarraySum([3, 4, 7, 2, -3, 1, 4, 2], 7))  # Output: 4
 print(subarraySum([2, -1, -3, 4, 2, 3], 5))  # Output: 2

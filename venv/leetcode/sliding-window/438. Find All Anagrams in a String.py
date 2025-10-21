@@ -38,7 +38,7 @@ def findAnagrams(s, p):
     p_count = Counter(p)
     window_count = Counter(s[:len(p)])
 
-    if window_count== p_count:
+    if window_count == p_count:
         result.append(0)
 
     for i in range(1, len(s) - len(p) + 1):
