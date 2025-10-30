@@ -20,5 +20,5 @@ def countGoodSubstrings(s):
     return count
 
 
-# print(countGoodSubstrings("xyzzaz"))  # Output: 1
+print(countGoodSubstrings("xyzzaz"))  # Output: 1
 print(countGoodSubstrings("aababcabc"))  # Output: 4
