@@ -1,3 +1,4 @@
+# TODO: Implement this function
 """
 1021. Remove Outermost Parentheses (Easy)
 
